@@ -10,7 +10,6 @@ const { connectDB } = require('./config/db');
 connectDB();
 
 const indexRouter = require('./routes/index');
-const newRouter = require('./routes/new');
 
 const app = express();
 
@@ -25,7 +24,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/new', newRouter);
+app.use('/new', indexRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

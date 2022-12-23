@@ -4,6 +4,7 @@ block content
   h1= title
   p Welcome to #{title}
   p messages: #{messages[0].text}
+  a(href="/new") New Entry
 
   each msg in messages
     ul 
