@@ -4,11 +4,11 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get('/', (req, res, next) => {
-  res.send('respond with a resource');
+  res.render('form');
 });
 
-router.get('/cool', (req, res, next) => {
-  res.send('Youre soooo cool.');
+router.post('/', (req, res, next) => {
+  res.send('hello from post');
 });
 
 module.exports = router;
