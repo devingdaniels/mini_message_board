@@ -21,14 +21,15 @@ router.get('/', (req, res) => {
 });
 
 router.get('/new', (req, res) => {
+  // Render the form.pug template
   res.render('form');
 });
 
 router.post('/', (req, res) => {
+  // Add new data to messages array
   const { title, user } = req.body;
-  messages.push({ text: title, user, added: new Date() });
+  messages.push({ text: title, user, added: new Date().getDate() });
   res.redirect('/');
-  // res.send(`<h3>${title}, ${user}</h3>`);
 });
 
 module.exports = router;
