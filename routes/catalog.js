@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable camelcase */
 const express = require('express');
 
 const router = express.Router();
